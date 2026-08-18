@@ -381,6 +381,7 @@
 
 # These settings are ignored on a primary server.
 
+#enable_cascade_sync_replication = false # enable cascading synchronous replication behavior
 #primary_conninfo = ''                  # connection string to sending server
 #primary_slot_name = ''                 # replication slot on sending server
 #hot_standby = on                       # "off" disallows queries during recovery

@@ -87,6 +87,8 @@
 #include "utils/ps_status.h"
 #include "utils/wait_event.h"
 
+bool enable_cascade_sync_replication = false;
+
 /* User-settable parameters for sync rep */
 char	   *SyncRepStandbyNames;
 

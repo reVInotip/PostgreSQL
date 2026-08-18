@@ -35,6 +35,8 @@
 #define SYNC_REP_PRIORITY		0
 #define SYNC_REP_QUORUM		1
 
+extern bool enable_cascade_sync_replication;
+
 /*
  * SyncRepGetCandidateStandbys returns an array of these structs,
  * one per candidate synchronous walsender.

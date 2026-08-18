@@ -877,6 +877,13 @@
   boot_val => 'true',
 },
 
+{ name => 'enable_cascade_sync_replication', type => 'bool', context => 'PGC_S_FILE', group => 'REPLICATION_STANDBY',
+  short_desc => 'Enable cascading synchronous replication behavior',
+  long_desc => 'If enable cascade replica will use values of 'synchronous_standby_names' and 'synchronous_commit' for make it`s replicas synchronous',
+  variable => 'enable_cascade_sync_replication',
+  boot_val => 'false',
+},
+
 { name => 'enable_distinct_reordering', type => 'bool', context => 'PGC_USERSET', group => 'QUERY_TUNING_METHOD',
   short_desc => 'Enables reordering of DISTINCT keys.',
   flags => 'GUC_EXPLAIN',
