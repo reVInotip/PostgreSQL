@@ -2635,6 +2635,8 @@ ProcessStandbyReplyMessage(void)
 
 	if (!am_cascading_walsender)
 		SyncRepReleaseWaiters();
+	else if (SyncRepRequested() && MyWalSnd->sync_standby_priority > 0)
+		WalRcvForceReply();
 
 	/*
 	 * Advance our local xmin horizon when the client confirmed a flush.
