@@ -36,6 +36,7 @@ typedef uint64 XLogRecPtr;
  * is less than required).
  */
 #define DefaultSendingLSN   ((XLogRecPtr) 2)
+#define XLogRecPtrIsDefaultSending(r)   ((r) == DefaultSendingLSN)
 
 /*
  * First LSN to use for "fake" LSNs.
